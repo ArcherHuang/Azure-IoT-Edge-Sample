@@ -1,0 +1,10 @@
+FROM resin/raspberry-pi-alpine-python
+
+WORKDIR /app
+
+COPY ./Python/Case2/module02/requirements02.txt ./
+RUN pip install -r requirements02.txt
+
+COPY ./Python/Case2/module02/module02.py ./
+
+CMD [ "python", "-u", "./module02.py" ]

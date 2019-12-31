@@ -1,0 +1,11 @@
+FROM resin/raspberry-pi-alpine-python
+
+WORKDIR /app
+
+COPY ./Python/Case2/module01/requirements01-2.txt ./
+RUN pip install -r requirements01-2.txt
+
+COPY ./Python/Case2/module01/module01-2.py ./
+
+EXPOSE 8080
+CMD [ "python", "-u", "./module01-2.py", "-p 8080" ]

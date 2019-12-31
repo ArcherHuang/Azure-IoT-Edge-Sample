@@ -1,0 +1,11 @@
+FROM resin/raspberry-pi-alpine-python:3.7
+
+WORKDIR /app
+
+COPY ./Python/Case5/module05/requirements05.txt ./
+RUN pip install -r requirements05.txt
+
+COPY ./Python/Case5/module05/module05.py ./
+COPY ./.env ./
+
+CMD [ "python", "-u", "./module05.py" ]
