@@ -9,6 +9,5 @@ device_client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRI
 
 if __name__ == '__main__':
   while True:
-    device_client.send_message("This is a message that is being sent")
-
+    device_client.send_message("This is a message that is being sent from Azure IoT Edge")
     time.sleep(6)

@@ -8,13 +8,6 @@ module_client = IoTHubModuleClient.create_from_edge_environment()
 module_client.connect()
 
 # ********************************************************************
-# GET  http://Raspberry-Pi-IP:8080/
-# ********************************************************************
-@app.route("/")
-def hello_world():
-  return 'Flask Dockerized on Azure IoT Edge ( Version: 0.17 )'
-
-# ********************************************************************
 # GET http://Raspberry-Pi-IP:8080/message/hello_world
 # ********************************************************************
 @app.route('/message/<content>')

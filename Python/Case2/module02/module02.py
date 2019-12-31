@@ -5,5 +5,5 @@ module_client.connect()
  
 if __name__ == '__main__':
   while True:
-    message = module_client.receive_message_on_input("input1") # block till message arrives
+    message = module_client.receive_message_on_input("input1")
     print("Received - {}!".format(message))

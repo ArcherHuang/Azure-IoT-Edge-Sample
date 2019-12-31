@@ -36,26 +36,6 @@
           }
         },
         "modules": {
-          "__MODULE01_NAME": {
-            "version": "1.0",
-            "type": "docker",
-            "status": "running",
-            "restartPolicy": "always",
-            "settings": {
-              "image": "__ACR_REGISTRY_NAME.azurecr.io/__MODULE01_NAME:__MODULE01_VERSION",
-              "createOptions": "{\"HostConfig\":{\"PortBindings\":{\"8080/tcp\":[{\"HostPort\":\"8080\"}]}}}"
-            }
-          },
-          "__MODULE02_NAME": {
-            "version": "1.0",
-            "type": "docker",
-            "status": "running",
-            "restartPolicy": "always",
-            "settings": {
-              "image": "__ACR_REGISTRY_NAME.azurecr.io/__MODULE02_NAME:__MODULE02_VERSION",
-              "createOptions": "{}"
-            }
-          },
           "__MODULE03_NAME": {
             "version": "1.0",
             "type": "docker",
@@ -73,7 +53,6 @@
       "properties.desired": {
         "schemaVersion": "1.0",
         "routes": {
-          "SampleModuleToModule": "FROM /messages/modules/module01/outputs/output1 INTO BrokeredEndpoint(\"/modules/module02/inputs/input1\")",
           "SampleModuleToIoTHub": "FROM /messages/modules/module03/outputs/* INTO $upstream"
         },
         "storeAndForwardConfiguration": {
