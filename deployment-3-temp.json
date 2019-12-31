@@ -53,7 +53,7 @@
       "properties.desired": {
         "schemaVersion": "1.0",
         "routes": {
-          "SampleModuleToIoTHub": "FROM /messages/modules/module03/outputs/* INTO $upstream"
+          "SampleModuleToIoTHub": "FROM /messages/modules/__MODULE03_NAME/outputs/* INTO $upstream"
         },
         "storeAndForwardConfiguration": {
           "timeToLiveSecs": 7200

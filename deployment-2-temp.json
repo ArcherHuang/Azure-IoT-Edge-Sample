@@ -63,7 +63,7 @@
       "properties.desired": {
         "schemaVersion": "1.0",
         "routes": {
-          "SampleModuleToModule": "FROM /messages/modules/module01/outputs/output1 INTO BrokeredEndpoint(\"/modules/module02/inputs/input1\")"
+          "SampleModuleToModule": "FROM /messages/modules/__MODULE01_NAME/outputs/output1 INTO BrokeredEndpoint(\"/modules/__MODULE02_NAME/inputs/input1\")"
         },
         "storeAndForwardConfiguration": {
           "timeToLiveSecs": 7200
