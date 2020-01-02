@@ -10,5 +10,4 @@ device_client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRI
 if __name__ == '__main__':
   while True:
     message = device_client.receive_message()
-    print(message.data)
     print( "Data: {}".format(message) )
